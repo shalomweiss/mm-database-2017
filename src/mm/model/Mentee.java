@@ -13,18 +13,18 @@ public class Mentee extends User{
 	
 
 	public Mentee(int id, String firstName, String lastName, String email, String phoneNumber, String password,
-			String gender, String address, String note, float remainingSemesters, String graduationStatus,
-			String academiclnstitution, float average, String academicDicipline, String academicDicipline2,
-			boolean isGuarantee) {
-		super(id, firstName, lastName, email, phoneNumber, password, gender, address, note);
-		this.remainingSemesters = remainingSemesters;
-		this.graduationStatus = graduationStatus;
-		this.academiclnstitution = academiclnstitution;
-		this.average = average;
-		this.academicDicipline = academicDicipline;
-		this.academicDicipline2 = academicDicipline2;
-		this.isGuarantee = isGuarantee;
-	}
+		String gender, String address, String note, boolean active, float remainingSemesters, String graduationStatus,
+		String academiclnstitution, float average, String academicDicipline, String academicDicipline2,
+		boolean isGuarantee) {
+	super(id, firstName, lastName, email, phoneNumber, password, gender, address, note, active);
+	this.remainingSemesters = remainingSemesters;
+	this.graduationStatus = graduationStatus;
+	this.academiclnstitution = academiclnstitution;
+	this.average = average;
+	this.academicDicipline = academicDicipline;
+	this.academicDicipline2 = academicDicipline2;
+	this.isGuarantee = isGuarantee;
+}
 
 	public float getRemainingSemesters() {
 		return remainingSemesters;

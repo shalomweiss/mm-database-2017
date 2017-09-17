@@ -10,10 +10,12 @@ public class User {
 	private String gender;
 	private String address;
 	private String note;
+	private boolean active;
 	
 	
+
 	public User(int id, String firstName, String lastName, String email, String phoneNumber, String password,
-			String gender, String address, String note) {
+			String gender, String address, String note, boolean active) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -24,6 +26,7 @@ public class User {
 		this.gender = gender;
 		this.address = address;
 		this.note = note;
+		this.active = active;
 	}
 
 
@@ -114,6 +117,16 @@ public class User {
 
 	public void setNote(String note) {
 		this.note = note;
+	}
+
+
+	public boolean isActive() {
+		return active;
+	}
+
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 	

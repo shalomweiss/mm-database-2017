@@ -3,24 +3,22 @@ package mm.model;
 import java.util.ArrayList;
 
 public class Mentor extends User{
-	  private String role;
-	   private boolean activeStatus;
+	   private String experience; 
+	   private String role;
 	   private int company;
-	   private String experience;
-	   private ArrayList<WorkPlace>workplace;
 	   private String volunteering;
+	   private String workHistory;
+	 
 	   
-
 		public Mentor(int id, String firstName, String lastName, String email, String phoneNumber, String password,
-			String gender, String address, String note, String role, boolean activeStatus, int company, String experience,
-			ArrayList<WorkPlace> workplace, String volunteering) {
-		super(id, firstName, lastName, email, phoneNumber, password, gender, address, note);
-		this.role = role;
-		this.activeStatus = activeStatus;
-		this.company = company;
+			String gender, String address, String note, boolean active, String experience, String role, int company,
+			String volunteering, String workHistory) {
+		super(id, firstName, lastName, email, phoneNumber, password, gender, address, note, active);
 		this.experience = experience;
-		this.workplace = workplace;
+		this.role = role;
+		this.company = company;
 		this.volunteering = volunteering;
+		this.workHistory = workHistory;
 	}
 
 
@@ -34,14 +32,6 @@ public class Mentor extends User{
 		}
 
 
-		public boolean isActiveStatus() {
-			return activeStatus;
-		}
-
-
-		public void setActiveStatus(boolean activeStatus) {
-			this.activeStatus = activeStatus;
-		}
 
 
 		public int getCompany() {
@@ -64,13 +54,14 @@ public class Mentor extends User{
 		}
 
 
-		public ArrayList<WorkPlace> getWorkplace() {
-			return workplace;
+
+		public String getWorkHistory() {
+			return workHistory;
 		}
 
 
-		public void setWorkplace(ArrayList<WorkPlace> workplace) {
-			this.workplace = workplace;
+		public void setWorkHistory(String workHistory) {
+			this.workHistory = workHistory;
 		}
 
 
