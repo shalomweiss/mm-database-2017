@@ -1,5 +1,7 @@
 package mm.da;
 
-public class DataAccess {
+import java.sql.Connection;
 
+public class DataAccess {
+	private Connection con = null;
 }
