@@ -6,23 +6,23 @@ public class Mentee extends User{
 	private String graduationStatus;
 	private String academiclnstitution;
 	private float average;
-	private String courseOfStudy;
-	private String courseOfStudy2;
+	private String academicDicipline;
+	private String academicDicipline2;
 	private boolean isGuarantee;
 	
 	
 
 	public Mentee(int id, String firstName, String lastName, String email, String phoneNumber, String password,
 			String gender, String address, String note, float remainingSemesters, String graduationStatus,
-			String academiclnstitution, float average, String courseOfStudy, String courseOfStudy2,
+			String academiclnstitution, float average, String academicDicipline, String academicDicipline2,
 			boolean isGuarantee) {
 		super(id, firstName, lastName, email, phoneNumber, password, gender, address, note);
 		this.remainingSemesters = remainingSemesters;
 		this.graduationStatus = graduationStatus;
 		this.academiclnstitution = academiclnstitution;
 		this.average = average;
-		this.courseOfStudy = courseOfStudy;
-		this.courseOfStudy2 = courseOfStudy2;
+		this.academicDicipline = academicDicipline;
+		this.academicDicipline2 = academicDicipline2;
 		this.isGuarantee = isGuarantee;
 	}
 
@@ -58,20 +58,21 @@ public class Mentee extends User{
 		this.average = average;
 	}
 
-	public String getCourseOfStudy() {
-		return courseOfStudy;
+
+	public String getAcademicDicipline() {
+		return academicDicipline;
 	}
 
-	public void setCourseOfStudy(String courseOfStudy) {
-		this.courseOfStudy = courseOfStudy;
+	public void setAcademicDicipline(String academicDicipline) {
+		this.academicDicipline = academicDicipline;
 	}
 
-	public String getCourseOfStudy2() {
-		return courseOfStudy2;
+	public String getAcademicDicipline2() {
+		return academicDicipline2;
 	}
 
-	public void setCourseOfStudy2(String courseOfStudy2) {
-		this.courseOfStudy2 = courseOfStudy2;
+	public void setAcademicDicipline2(String academicDicipline2) {
+		this.academicDicipline2 = academicDicipline2;
 	}
 
 	public boolean isGuarantee() {
