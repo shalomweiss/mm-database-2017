@@ -28,16 +28,16 @@ CREATE TABLE `mentees` (
   `id` int(11) NOT NULL,
   `remainingSemesters` float DEFAULT NULL,
   `graduationStatus` tinyint(4) DEFAULT NULL,
-  `academicInstitution` int(11) DEFAULT NULL,
+  `academicInstitute` int(11) DEFAULT NULL,
   `average` float DEFAULT NULL,
-  `courseOfStudy` varchar(45) DEFAULT NULL,
-  `courseOfStudy2` varchar(45) DEFAULT NULL,
+  `academicDicipline1` varchar(45) DEFAULT NULL,
+  `academicDicipline2` varchar(45) DEFAULT NULL,
   `isGuarantee` tinyint(4) DEFAULT NULL,
   `resume` varchar(254) DEFAULT NULL,
   `gradeSheet` varchar(254) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `academicId_idx` (`academicInstitution`),
-  CONSTRAINT `academicId` FOREIGN KEY (`academicInstitution`) REFERENCES `academicinstitution` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  KEY `academicId_idx` (`academicInstitute`),
+  CONSTRAINT `academicId` FOREIGN KEY (`academicInstitute`) REFERENCES `academicInstitute` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `menteeId` FOREIGN KEY (`id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
