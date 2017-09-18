@@ -9,11 +9,11 @@ public class Mentor extends User{
 	   private String volunteering;
 	   private String workHistory;
 	 
-	   
+
 		public Mentor(int id, String firstName, String lastName, String email, String phoneNumber, String password,
-			String gender, String address, String note, boolean active, String experience, String role, int company,
-			String volunteering, String workHistory) {
-		super(id, firstName, lastName, email, phoneNumber, password, gender, address, note, active);
+			String gender, String address, String note, boolean active, userType type, String experience, String role,
+			int company, String volunteering, String workHistory) {
+		super(id, firstName, lastName, email, phoneNumber, password, gender, address, note, active, type);
 		this.experience = experience;
 		this.role = role;
 		this.company = company;

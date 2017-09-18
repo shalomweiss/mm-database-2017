@@ -11,11 +11,16 @@ public class User {
 	private String address;
 	private String note;
 	private boolean active;
+	private userType type;
+	
+	public enum userType{
+		ADMIN,TSOFEN,MENTOR,MENTEE;
+	}
 	
 	
 
 	public User(int id, String firstName, String lastName, String email, String phoneNumber, String password,
-			String gender, String address, String note, boolean active) {
+			String gender, String address, String note, boolean active, userType type) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -27,7 +32,24 @@ public class User {
 		this.address = address;
 		this.note = note;
 		this.active = active;
+		this.type = type;
 	}
+
+
+
+
+	public userType getType() {
+		return type;
+	}
+
+
+
+
+	public void setType(userType type) {
+		this.type = type;
+	}
+
+
 
 
 	public int getId() {
